@@ -155,6 +155,8 @@
 #include "MaxDuino.h"
 #include "hwconfig.h"
 #include "buttons.h"
+#include "Display.h"
+#include "menu.h"
 
 #if defined(BLOCK_EEPROM_PUT) || defined(LOAD_EEPROM_LOGO) || defined(RECORD_EEPROM_LOGO) || defined(LOAD_EEPROM_SETTINGS)
 #include <EEPROM.h>
