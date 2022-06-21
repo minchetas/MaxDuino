@@ -144,10 +144,18 @@
 #else
   const byte chipSelect = 10;          //Sd card chip select pin
   
-  #define btnPlay       17            //Play Button
-  #define btnStop       16            //Stop Button
-  #define btnUp         15            //Up button
-  #define btnDown       14            //Down button
+  #ifdef ENCODER
+    // Rotary Encoder PINS
+    #define PIN_ENCODER_DT      2     // In Arduino need use digital ports 2 & 3 for interruptions 
+    #define PIN_ENCODER_CLK     3     // In Arduino need use digital ports 2 & 3 for interruptions
+    #define PIN_ENCODER_SWITCH 17
+  #else  
+    #define btnPlay       17          //Play Button
+    #define btnStop       16          //Stop Button
+    #define btnUp         15          //Up button
+    #define btnDown       14          //Down button
+  #endif
+  
   #define btnMotor      6             //Motor Sense (connect pin to gnd to play, NC for pause)
   #define btnRoot       7             //Return to SD card root
 #endif

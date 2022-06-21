@@ -1,7 +1,9 @@
 #include "buttons.h"
 #include "pinSetup.h"
 
-#if defined(BUTTON_ADC)
+#if defined(ENCODER)
+  // Disable buttons
+#elif defined(BUTTON_ADC)
 
 void setup_buttons(void)
 {

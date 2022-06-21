@@ -7,6 +7,7 @@ bool button_stop();
 bool button_up();
 bool button_down();
 bool button_menu();
+bool button_root();
 
 void debounce(bool (*)());
 void debouncemax(bool (*)());

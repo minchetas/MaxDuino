@@ -351,6 +351,9 @@ void setup() {
     OledStatusLine();
   #endif
   
+  #ifdef ENCODER
+  encoderSetup();  
+  #endif  
 }
 
 /*void setup() {
@@ -374,6 +377,10 @@ void loop(void) {
   //  digitalWrite(outputPin, LOW);    //Keep output LOW while no file is playing.
     WRITE_LOW;    
   }
+  
+  #ifdef ENCODER
+  encoderLoop();
+  #endif
   
   if((millis()>=scrollTime) && start==0 && (strlen(fileName)> SCREENSIZE)) {
     //Filename scrolling only runs if no file is playing to prevent I2C writes 
